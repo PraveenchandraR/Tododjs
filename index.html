@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDos</title>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="nav">
+        <h1>ToDos</h1>
+        <h1 id="main">No ToDos added</h1>
+        <button class="add-button" onclick="openCard()">+ Add Place</button>
+      </div>
+      <div id="popupCard" class="popup-card">
+        <h2>Add New Place</h2>
+        <input type="text" id="placeName" placeholder="Enter place name" />
+        <div class="buttons">
+          <button onclick="addPlace()" class="btn">Add Place</button>
+          <button onclick="closeCard()" class="btn">Close</button>
+        </div>
+      </div>
+
+      <div id="todoContainer">
+        <!-- Place cards will be added here dynamically -->
+      </div>
+
+      <!-- Add-List Popup Card -->
+      <div id="addListCard" class="popup-card">
+        <h2>Add-List</h2>
+        <input type="text" id="itemName" placeholder="Enter item name" />
+        <button onclick="addItemToList()">Add Item</button>
+        <button onclick="closeListCard()">Close</button>
+      </div>
+    </div>
+    <script src="./Todo.js"></script>
+  </body>
+</html>

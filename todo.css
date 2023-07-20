@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 800px;
+  background-image: linear-gradient(45deg, black, transparent);
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.add-button {
+  /* float: right; */
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+.place-card {
+  width: 30%;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  background-color: aliceblue;
+  z-index: 1;
+}
+.add-list-button {
+  cursor: pointer;
+  background-color: #00cc00;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 5px;
+  right: 90px;
+}
+#todoContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 100vh;
+}
+.popup-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: red;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  border-radius: 10px;
+  z-index: 2;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  color: red; */
+}
+#placeName {
+  border-radius: 10px;
+}
+
+.list-item {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.marked {
+  text-decoration: line-through;
+}
+.mark-button {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #ffa500;
+  color: #fff;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+}
+.delete-card-button {
+  cursor: pointer;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 900px) {
+  .body {
+    display: flex;
+  }
+  .add-button {
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #todoContainer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .add-list-button {
+    position: absolute;
+  }
+  .delete-card-button {
+    width: inherit;
+  }
+  .place-card {
+    width: 40%;
+  }
+}
